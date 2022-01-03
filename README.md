@@ -1,5 +1,5 @@
 
-# Cryptolist
+# CryptoList
 
 > Find all about popular cryptocurrencies and it's prices.
 
@@ -20,7 +20,7 @@ CryptoList allows users to find out the latest information about top cryptocurre
 To get a local copy up and running follow these simple example steps.
 Clone the repo and enter the directory.
 ```
-git clone git@github.com:Ntare22/spacex.git && cd spacex
+git@github.com:eapenzacharias/cryptolist.git && cd cryptolist
 ```
 
 ### Prerequisites
