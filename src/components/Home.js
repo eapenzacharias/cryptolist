@@ -1,6 +1,15 @@
+import React, { useEffect } from 'react';
 import { Col, Row } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { getData } from '../redux/coins/coins';
 
 const Home = () => {
+  const coinData = useSelector((state) => state.coinReducer);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (coinData.length === 0) dispatch(getData());
+  }, []);
+
   const UnderConstruction = () => (
     <>
       <div />
