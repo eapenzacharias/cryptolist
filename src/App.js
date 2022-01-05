@@ -1,15 +1,21 @@
+import { Container } from 'react-bootstrap';
+import Home from './components/Home';
+import NavBar from './components/NavBar';
+
 const App = () => {
-  const UnderConstruction = () => (
+  const UnderCons = () => (
     <>
-      <div>
-        <h1>The site is Under Construction</h1>
-      </div>
+      <div />
     </>
   );
 
   return (
     <>
-      <UnderConstruction />
+      <Container fluid>
+        <NavBar />
+        <Home />
+        <UnderCons />
+      </Container>
     </>
   );
 };
