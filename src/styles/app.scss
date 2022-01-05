@@ -18,9 +18,10 @@ $dark2: #bb8e11;
     .container-fluid {
       background-color: var(--bs-light);
       .main {
-        background: url("../assets/logo.png") no-repeat center;
+        background: linear-gradient(0deg, #f7b50093, #f7b50093),
+          url("../assets/logo.png") no-repeat center;
         background-size: 45%;
-        min-height: 94vh;
+        min-height: 500px;
         display: flex;
         flex-direction: column;
         justify-content: center;
