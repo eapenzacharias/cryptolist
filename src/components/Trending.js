@@ -11,31 +11,37 @@ import { getData } from '../redux/coins/coins';
 
 const Coin = (props) => {
   const {
-    id, symbol, name, supply, maxSupply, marketCapUsd,
+    id, rank, symbol, name, priceUsd, changePercent24Hr, supply, volumeUsd24Hr, marketCapUsd,
   } = props;
 
   return (
     <tr key={id}>
-      <th className="col-3">{`${name} - ${symbol}`}</th>
-      <td className="col-3">{supply}</td>
-      <td className="col-3 align-middle">{maxSupply}</td>
-      <td className="col-3 align-middle">{marketCapUsd}</td>
+      <td className="col">{rank}</td>
+      <th className="col">{`${name} - ${symbol}`}</th>
+      <th className="col">{`$${Number(priceUsd).toFixed(4)}`}</th>
+      <th className="col">{`${changePercent24Hr}%`}</th>
+      <td className="col align-middle">{`$${Math.floor(marketCapUsd)}`}</td>
+      <td className="col align-middle">{`${volumeUsd24Hr}`}</td>
+      <td className="col">{supply}</td>
     </tr>
   );
 };
 
 Coin.propTypes = {
   id: PropTypes.string.isRequired,
+  rank: PropTypes.string.isRequired,
   symbol: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   supply: PropTypes.string.isRequired,
-  maxSupply: PropTypes.string,
+  changePercent24Hr: PropTypes.string.isRequired,
+  priceUsd: PropTypes.string.isRequired,
+  volumeUsd24Hr: PropTypes.string.isRequired,
   marketCapUsd: PropTypes.string.isRequired,
 };
 
-Coin.defaultProps = {
-  maxSupply: 'Unlimited',
-};
+// Coin.defaultProps = {
+//   maxSupply: 'Unlimited',
+// };
 
 const Trending = () => {
   const coins = useSelector((state) => state.coinReducer);
@@ -50,19 +56,25 @@ const Trending = () => {
           <Table striped bordered hover vertical-align="middle">
             <tbody>
               <tr>
-                <th className="col-3">Mission</th>
-                <th className="col-3">Description</th>
-                <th className="col-3">Status</th>
-                <th className="col-3"> </th>
+                <th className="col">#</th>
+                <th className="col">Name</th>
+                <th className="col">Price</th>
+                <th className="col">24h %</th>
+                <th className="col">Market Cap</th>
+                <th className="col">Volume(24h)</th>
+                <th className="col">Circulating Supply</th>
               </tr>
               {coins.map((coin) => (
                 <Coin
                   key={coin.id}
                   id={coin.id}
+                  rank={coin.rank}
                   name={coin.name}
+                  priceUsd={coin.priceUsd}
                   symbol={coin.symbol}
                   supply={coin.supply}
-                  maxSupply={coin.maxSupply}
+                  volumeUsd24Hr={coin.volumeUsd24Hr}
+                  changePercent24Hr={coin.changePercent24Hr}
                   marketCapUsd={coin.marketCapUsd}
                 />
               ))}

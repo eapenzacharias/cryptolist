@@ -5,7 +5,7 @@ const TOP_GAINERS = 'cryptolist/coins/TOP_GAINERS';
 const TOP_LOSERS = 'cryptolist/coins/TOP_LOSERS';
 const TRENDING = 'cryptolist/coins/TRENDING';
 
-const dataUrl = 'https://api.coincap.io/v2/assets?limit=1000';
+const dataUrl = 'https://api.coincap.io/v2/assets?limit=100';
 const initialState = [];
 
 export const getData = () => async (dispatch) => {
@@ -18,6 +18,7 @@ export const getData = () => async (dispatch) => {
       supply, maxSupply, marketCapUsd,
       volumeUsd24Hr, priceUsd, changePercent24Hr, vwap24Hr,
     } = coin;
+
     fetchedCoins.push({
       id,
       rank,
