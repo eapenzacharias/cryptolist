@@ -1,7 +1,4 @@
-/* eslint-disable no-unused-vars */
 import {
-  Badge,
-  Button,
   Container,
   Row,
   Col,
@@ -18,7 +15,7 @@ const Coin = (props) => {
   } = props;
 
   return (
-    <tr>
+    <tr key={id}>
       <th className="col-3">{`${name} - ${symbol}`}</th>
       <td className="col-3">{supply}</td>
       <td className="col-3 align-middle">{maxSupply}</td>

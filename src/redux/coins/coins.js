@@ -11,7 +11,6 @@ const initialState = [];
 export const getData = () => async (dispatch) => {
   const result = await axios.get(dataUrl);
   const coinData = result.data.data;
-  console.log(coinData);
   const fetchedCoins = [];
   coinData.forEach((coin) => {
     const {
