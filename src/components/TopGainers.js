@@ -9,16 +9,22 @@ import { useEffect } from 'react';
 import { getData } from '../redux/coins/coins';
 import Coin from './Coin';
 
-// Coin.defaultProps = {
-//   maxSupply: 'Unlimited',
-// };
-
-const Trending = () => {
+const TopGainers = () => {
   const coins = useSelector((state) => state.coinReducer);
   const dispatch = useDispatch();
   useEffect(() => {
     if (coins.length === 0) dispatch(getData());
   }, []);
+  const coinsCopy = coins;
+  coinsCopy.sort((a, b) => {
+    if (a.changePercent24Hr > b.changePercent24Hr) {
+      return -1;
+    }
+    if (a.changePercent24Hr < b.changePercent24Hr) {
+      return 1;
+    }
+    return 0;
+  });
   return (
     <Container className="missions">
       <Row>
@@ -34,7 +40,7 @@ const Trending = () => {
                 <th className="col">Volume(24h)</th>
                 <th className="col">Circulating Supply</th>
               </tr>
-              {coins.map((coin) => (
+              {coinsCopy.map((coin) => (
                 <Coin
                   key={coin.id}
                   id={coin.id}
@@ -56,4 +62,4 @@ const Trending = () => {
   );
 };
 
-export default Trending;
+export default TopGainers;
