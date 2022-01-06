@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { getData } from '../redux/coins/coins';
 
@@ -12,7 +12,7 @@ const Home = () => {
 
   const UnderConstruction = () => (
     <>
-      <div />
+      <Container />
     </>
   );
 

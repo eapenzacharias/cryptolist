@@ -5,7 +5,7 @@ const TOP_GAINERS = 'cryptolist/coins/TOP_GAINERS';
 const TOP_LOSERS = 'cryptolist/coins/TOP_LOSERS';
 const TRENDING = 'cryptolist/coins/TRENDING';
 
-const dataUrl = 'https://api.coincap.io/v2/assets';
+const dataUrl = 'https://api.coincap.io/v2/assets?limit=1000';
 const initialState = [];
 
 export const getData = () => async (dispatch) => {
