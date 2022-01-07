@@ -8,16 +8,28 @@ const TRENDING = 'cryptolist/coins/TRENDING';
 const dataUrl = 'https://api.coincap.io/v2/assets?limit=100';
 const initialState = [];
 
+const convertNum = (coin) => {
+  const numCoin = coin;
+  numCoin.rank = Number(coin.rank);
+  numCoin.supply = Number(coin.supply);
+  numCoin.priceUsd = Number(coin.priceUsd);
+  numCoin.changePercent24Hr = Number(coin.changePercent24Hr);
+  numCoin.marketCapUsd = Math.floor(coin.marketCapUsd);
+  numCoin.volumeUsd24Hr = Number(coin.volumeUsd24Hr);
+  return numCoin;
+};
+
 export const getData = () => async (dispatch) => {
   const result = await axios.get(dataUrl);
   const coinData = result.data.data;
   const fetchedCoins = [];
   coinData.forEach((coin) => {
+    const coinNum = convertNum(coin);
     const {
       id, rank, symbol, name,
       supply, maxSupply, marketCapUsd,
       volumeUsd24Hr, priceUsd, changePercent24Hr, vwap24Hr,
-    } = coin;
+    } = coinNum;
 
     fetchedCoins.push({
       id,

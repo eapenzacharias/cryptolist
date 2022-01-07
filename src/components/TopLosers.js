@@ -9,24 +9,22 @@ import { useEffect } from 'react';
 import { getData } from '../redux/coins/coins';
 import Coin from './Coin';
 
-const Trending = () => {
+const TopLosers = () => {
   const coins = useSelector((state) => state.coinReducer);
   const dispatch = useDispatch();
   useEffect(() => {
     if (coins.length === 0) dispatch(getData());
   }, []);
-
   const coinsCopy = coins;
   coinsCopy.sort((a, b) => {
-    if (a.volumeUsd24Hr > b.volumeUsd24Hr) {
+    if (a.changePercent24Hr < b.changePercent24Hr) {
       return -1;
     }
-    if (a.volumeUsd24Hr < b.volumeUsd24Hr) {
+    if (a.changePercent24Hr > b.changePercent24Hr) {
       return 1;
     }
     return 0;
   });
-
   return (
     <Container className="missions">
       <Row>
@@ -64,4 +62,4 @@ const Trending = () => {
   );
 };
 
-export default Trending;
+export default TopLosers;
