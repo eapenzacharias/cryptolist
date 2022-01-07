@@ -73,7 +73,7 @@ const Home = () => {
               className="lighter sub-home"
               onClick={(e) => {
                 e.preventDefault();
-                navigate('trending');
+                navigate('coins');
               }}
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="50%" fill="#83630B" className="bi bi-archive-fill" viewBox="0 0 16 16">
