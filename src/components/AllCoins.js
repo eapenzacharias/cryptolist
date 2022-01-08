@@ -37,9 +37,7 @@ const AllCoins = () => {
                 <th className="col">Name</th>
                 <th className="col">Price</th>
                 <th className="col">24h %</th>
-                <th className="col">Market Cap</th>
-                <th className="col">Volume(24h)</th>
-                <th className="col">Circulating Supply</th>
+                <th className="col">Details</th>
               </tr>
               {localState.map((coin) => (
                 <Coin
