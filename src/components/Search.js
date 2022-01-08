@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getData } from '../redux/coins/coins';
 import Coin from './Coin';
+import '../styles/search.scss';
 
 const Search = () => {
   const coins = useSelector((state) => state.coinReducer);
@@ -50,8 +51,8 @@ const Search = () => {
           name="main-search-bar"
           onChange={filterCoin}
           onKeyUp={filterCoin}
-          className="main-search-bar-int active"
-          placeholder="Search by stock name or company name.."
+          className="main-search"
+          placeholder="Search by Coin..."
         />
         <button
           type="button"
