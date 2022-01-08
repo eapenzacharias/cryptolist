@@ -63,7 +63,7 @@ const Search = () => {
               className="hideSearchBtn"
               onClick={(e) => {
                 e.preventDefault();
-                navigate('trending');
+                navigate('../');
               }}
             >
               x
@@ -78,13 +78,11 @@ const Search = () => {
             <Table striped bordered hover vertical-align="middle">
               <tbody>
                 <tr>
-                  <th className="col">#</th>
+                  <th className="col d-none d-sm-block">#</th>
                   <th className="col">Name</th>
                   <th className="col">Price</th>
-                  <th className="col">24h %</th>
-                  <th className="col">Market Cap</th>
-                  <th className="col">Volume(24h)</th>
-                  <th className="col">Circulating Supply</th>
+                  <th className="col d-none d-sm-block">24h %</th>
+                  <th className="col">Details</th>
                 </tr>
                 {localState.map((coin) => (
                   <Coin

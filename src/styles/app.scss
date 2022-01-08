@@ -8,24 +8,47 @@ $theme-colors: (
   "dark": #d09f13,
 );
 $dark2: #bb8e11;
+$dark3: #705000;
 
 * {
   font-size: 12px;
+  padding: 0;
 
-  body {
+  .body {
     font-family: "Lato", sans-serif;
     background-color: var(--bs-light);
     color: var(--bs-primary);
+    padding: 0;
+
+    .main-container {
+      height: 100vh;
+      padding: 0;
+      overflow-x: hidden;
+    }
 
     .container-fluid {
       background-color: var(--bs-light);
+
+      .heading {
+        padding: 2.5rem 0;
+
+        h1 {
+          font: 700 3.5rem $font-family-base;
+          color: $dark3;
+        }
+
+        h2 {
+          font: 400 2.5rem $font-family-base;
+          color: $dark3;
+        }
+      }
 
       .main {
         background:
           linear-gradient(0deg, #f7b50093, #f7b50093),
           url("../assets/logo.png") no-repeat center;
         background-size: 45%;
-        min-height: 500px;
+        min-height: 250px;
         display: flex;
         flex-direction: column;
         justify-content: center;

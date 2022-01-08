@@ -13,10 +13,10 @@ const Coin = (props) => {
   return (
     <>
       <tr key={id}>
-        <td className="col">{rank}</td>
+        <td className="col d-none d-sm-block">{rank}</td>
         <th className="col">{`${name} - ${symbol}`}</th>
         <th className="col">{`$${priceUsd.toFixed(4)}`}</th>
-        <th className="col">
+        <th className="col d-none d-sm-block">
           <Badge
             className={changePercent24Hr >= 0 ? 'bd-success' : 'bd-danger'}
             bg={changePercent24Hr >= 0 ? 'success' : 'danger'}
