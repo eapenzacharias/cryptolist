@@ -9,7 +9,7 @@ const imgURL = 'https://cryptoicons.org/api/icon/';
 
 const SingleCoin = (props) => {
   const {
-    id, rank, symbol, name,
+    id, symbol, name,
     priceUsd, changePercent24Hr, supply,
     volumeUsd24Hr, marketCapUsd, onHide,
   } = props;
@@ -84,7 +84,6 @@ const SingleCoin = (props) => {
 
 SingleCoin.propTypes = {
   id: PropTypes.string.isRequired,
-  rank: PropTypes.number.isRequired,
   symbol: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   supply: PropTypes.number.isRequired,

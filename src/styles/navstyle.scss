@@ -1,8 +1,24 @@
-nav {
+.navbar {
   color: var(--bs-primary);
   height: 6vh;
 
   .cryptolist {
     width: 100%;
   }
+}
+
+.navbar-nav {
+  height: 9vh;
+  margin: 0;
+
+  h2 {
+    font-size: 2.5rem;
+    color: var(--bs-secondary);
+    padding: 0.5rem;
+  }
+}
+
+.sticky-top {
+  height: 9vh;
+  color: var(--bs-primary);
 }

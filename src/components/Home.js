@@ -23,7 +23,7 @@ const Home = () => {
       <Row>
         <Col lg={6} className="main">
           <h1>CryptoList</h1>
-          <h2>Over 1000+ Cryptocurrencies</h2>
+          <h2>Over 100+ Cryptocurrencies</h2>
         </Col>
         <Col lg={6}>
           <Row>

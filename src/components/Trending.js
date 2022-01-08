@@ -29,16 +29,21 @@ const Trending = () => {
   });
 
   return (
-    <Container className="missions">
+    <Container>
+      <Row>
+        <Col className="heading">
+          <h1>Trending</h1>
+        </Col>
+      </Row>
       <Row>
         <Col>
           <Table striped bordered hover vertical-align="middle">
             <tbody>
               <tr>
-                <th className="col">#</th>
+                <th className="col d-none d-sm-block">#</th>
                 <th className="col">Name</th>
                 <th className="col">Price</th>
-                <th className="col">24h %</th>
+                <th className="col d-none d-sm-block">24h %</th>
                 <th className="col">Details</th>
               </tr>
               {localState.map((coin) => (

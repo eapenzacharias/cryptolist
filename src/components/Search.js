@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getData } from '../redux/coins/coins';
 import Coin from './Coin';
+import '../styles/search.scss';
 
 const Search = () => {
   const coins = useSelector((state) => state.coinReducer);
@@ -45,24 +46,30 @@ const Search = () => {
   return (
     <Container fluid>
       <div className="searchbar">
-        <input
-          type="search"
-          name="main-search-bar"
-          onChange={filterCoin}
-          onKeyUp={filterCoin}
-          className="main-search-bar-int active"
-          placeholder="Search by stock name or company name.."
-        />
-        <button
-          type="button"
-          className="hideSearchBtn"
-          onClick={(e) => {
-            e.preventDefault();
-            navigate('trending');
-          }}
-        >
-          x
-        </button>
+        <Row>
+          <Col lg="11" md="11">
+            <input
+              type="search"
+              name="main-search-bar"
+              onChange={filterCoin}
+              onKeyUp={filterCoin}
+              className="main-search"
+              placeholder="Search by Coin..."
+            />
+          </Col>
+          <Col lg="1" md="1">
+            <button
+              type="button"
+              className="hideSearchBtn"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate('../');
+              }}
+            >
+              x
+            </button>
+          </Col>
+        </Row>
       </div>
 
       <Container className="missions">
@@ -71,13 +78,11 @@ const Search = () => {
             <Table striped bordered hover vertical-align="middle">
               <tbody>
                 <tr>
-                  <th className="col">#</th>
+                  <th className="col d-none d-sm-block">#</th>
                   <th className="col">Name</th>
                   <th className="col">Price</th>
-                  <th className="col">24h %</th>
-                  <th className="col">Market Cap</th>
-                  <th className="col">Volume(24h)</th>
-                  <th className="col">Circulating Supply</th>
+                  <th className="col d-none d-sm-block">24h %</th>
+                  <th className="col">Details</th>
                 </tr>
                 {localState.map((coin) => (
                   <Coin
