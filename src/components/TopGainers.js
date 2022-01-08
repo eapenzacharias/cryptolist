@@ -5,18 +5,20 @@ import {
   Table,
 } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { getData } from '../redux/coins/coins';
 import Coin from './Coin';
 
 const TopGainers = () => {
   const coins = useSelector((state) => state.coinReducer);
+  const [localState, setLocalState] = useState([]);
   const dispatch = useDispatch();
   useEffect(() => {
     if (coins.length === 0) dispatch(getData());
+    setLocalState(coins);
   }, []);
-  const coinsCopy = coins;
-  coinsCopy.sort((a, b) => {
+
+  localState.sort((a, b) => {
     if (a.changePercent24Hr > b.changePercent24Hr) {
       return -1;
     }
@@ -40,7 +42,7 @@ const TopGainers = () => {
                 <th className="col">Volume(24h)</th>
                 <th className="col">Circulating Supply</th>
               </tr>
-              {coinsCopy.map((coin) => (
+              {localState.map((coin) => (
                 <Coin
                   key={coin.id}
                   id={coin.id}
