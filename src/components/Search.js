@@ -46,24 +46,30 @@ const Search = () => {
   return (
     <Container fluid>
       <div className="searchbar">
-        <input
-          type="search"
-          name="main-search-bar"
-          onChange={filterCoin}
-          onKeyUp={filterCoin}
-          className="main-search"
-          placeholder="Search by Coin..."
-        />
-        <button
-          type="button"
-          className="hideSearchBtn"
-          onClick={(e) => {
-            e.preventDefault();
-            navigate('trending');
-          }}
-        >
-          x
-        </button>
+        <Row>
+          <Col lg="11" md="11">
+            <input
+              type="search"
+              name="main-search-bar"
+              onChange={filterCoin}
+              onKeyUp={filterCoin}
+              className="main-search"
+              placeholder="Search by Coin..."
+            />
+          </Col>
+          <Col lg="1" md="1">
+            <button
+              type="button"
+              className="hideSearchBtn"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate('trending');
+              }}
+            >
+              x
+            </button>
+          </Col>
+        </Row>
       </div>
 
       <Container className="missions">
