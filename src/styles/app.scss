@@ -3,12 +3,13 @@
 $font-family-base: "Lato", sans-serif;
 $theme-colors: (
   "primary": #000,
-  "secondary": #1b1b1b,
-  "light": #f7b600,
-  "dark": #d09f13,
+  "secondary": #1a2122,
+  "light": #01a6cf,
+  "dark": #0197bd,
 );
-$dark2: #bb8e11;
-$dark3: #705000;
+$dark2: #0289ad;
+$dark3: #015569;
+$white: #dbe8e9;
 
 * {
   font-size: 12px;
@@ -44,8 +45,7 @@ $dark3: #705000;
       }
 
       .main {
-        background:
-          linear-gradient(0deg, #f7b50093, #f7b50093),
+        background: linear-gradient(0deg, #01a6cf93, #01a6cf93),
           url("../assets/logo.png") no-repeat center;
         background-size: 45%;
         min-height: 250px;
@@ -57,6 +57,13 @@ $dark3: #705000;
 
         h1 {
           font: 700 5rem $font-family-base;
+          color: $white;
+          text-shadow: 0 0 10px #004a5c9c;
+        }
+        h2 {
+          text-transform: uppercase;
+          color: $white;
+          text-shadow: 0 0 10px #004a5cb9;
         }
       }
 
@@ -66,6 +73,16 @@ $dark3: #705000;
         justify-content: center;
         align-items: center;
         height: 47vh;
+        padding-bottom: 0;
+        h2 {
+          width: 100%;
+          text-align: right;
+          padding: 4rem 1rem 0 0;
+          font-size: 1.6rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: $white;
+        }
       }
 
       .lighter {
