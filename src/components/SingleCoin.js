@@ -1,15 +1,14 @@
-/* eslint-disable no-unused-vars */
 import PropTypes from 'prop-types';
 import {
-  Badge, Button, Col, Container, Modal, Row,
+  Button, Col, Container, Modal, Row,
 } from 'react-bootstrap';
 import '../styles/model.scss';
 
-const imgURL = 'https://cryptoicons.org/api/icon/';
+const imgURI = 'https://cryptoicon-api.vercel.app/api/icon/';
 
 const SingleCoin = (props) => {
   const {
-    id, symbol, name,
+    symbol, name,
     priceUsd, changePercent24Hr, supply,
     volumeUsd24Hr, marketCapUsd, onHide,
   } = props;
@@ -31,7 +30,11 @@ const SingleCoin = (props) => {
           <Container>
             <Row>
               <Col xs="3">
-                <img src={`${imgURL}${symbol.toLowerCase()}/50`} alt={symbol} />
+                <img
+                  src={`${imgURI}${symbol.toLowerCase()}`}
+                  alt={symbol}
+                  height="50"
+                />
               </Col>
               <Col>
                 <h2>{`${name} - ${symbol}`}</h2>
