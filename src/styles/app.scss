@@ -83,14 +83,30 @@ $white: #dbe8e9;
           text-transform: uppercase;
           color: $white;
         }
+        .icon {
+          padding-top: 1rem;
+        }
       }
 
-      .lighter {
+      .one,
+      .four {
         background-color: var(--bs-dark);
       }
 
-      .darker {
+      .two,
+      .three {
         background-color: $dark2;
+      }
+      @media (max-width: 700px) {
+        .one,
+        .three {
+          background-color: var(--bs-dark);
+        }
+
+        .two,
+        .four {
+          background-color: $dark2;
+        }
       }
     }
   }

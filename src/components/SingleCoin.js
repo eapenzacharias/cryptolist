@@ -6,6 +6,7 @@ import {
 import '../styles/model.scss';
 
 const imgURL = 'https://cryptoicons.org/api/icon/';
+const imgURI = 'https://cryptoicon-api.vercel.app/api/icon/';
 
 const SingleCoin = (props) => {
   const {
@@ -31,7 +32,11 @@ const SingleCoin = (props) => {
           <Container>
             <Row>
               <Col xs="3">
-                <img src={`${imgURL}${symbol.toLowerCase()}/50`} alt={symbol} />
+                <img
+                  src={`${imgURI}${symbol.toLowerCase()}`}
+                  alt={symbol}
+                  height="50"
+                />
               </Col>
               <Col>
                 <h2>{`${name} - ${symbol}`}</h2>
