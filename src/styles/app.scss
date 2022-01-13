@@ -97,7 +97,7 @@ $white: #dbe8e9;
       .three {
         background-color: $dark2;
       }
-      @media (max-width: 700px) {
+      @media (max-width: 575px) {
         .one,
         .three {
           background-color: var(--bs-dark);
