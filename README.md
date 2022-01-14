@@ -7,6 +7,7 @@ CryptoList allows users to find out the latest information about top cryptocurre
 
 
 ### Live Project
+[Netlify](https://cryptolister.netlify.app/)
 
 ## Built With
 
@@ -69,7 +70,9 @@ Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](../../issues/).
 
 ## Acknowledgments
-.
+- Design Idea: [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
+- Cryptocoin Icon API: [TokenTax](https://github.com/TokenTax/cryptoicon-api)
+- Cryptocurrency data API: [coincap.io](https://docs.coincap.io/)
 
 ## Show your support
 
