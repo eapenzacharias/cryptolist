@@ -4,7 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import SingleCoin from '../components/SingleCoin';
 import mockAPI from './__mock__/mockAPI';
 
-describe('Should load the Homepage with menu', () => {
+describe('Should load popup od singleCoin', () => {
   const {
     id, symbol, name, priceUsd, changePercent24Hr, supply, volumeUsd24Hr, marketCapUsd,
   } = mockAPI[0];
@@ -21,7 +21,7 @@ describe('Should load the Homepage with menu', () => {
           changePercent24Hr={changePercent24Hr}
           marketCapUsd={marketCapUsd}
           volumeUsd24Hr={volumeUsd24Hr}
-          onHide={() => console.log('OnHide')}
+          onHide={() => 'OnHide'}
         />
       </MemoryRouter>,
     ).toJSON;
