@@ -4,7 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import SingleCoin from '../components/SingleCoin';
 import mockAPI from './__mock__/mockAPI';
 
-describe('Should load popup od singleCoin', () => {
+describe('Should load popup od single', () => {
   const {
     id, symbol, name, priceUsd, changePercent24Hr, supply, volumeUsd24Hr, marketCapUsd,
   } = mockAPI[0];

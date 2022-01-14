@@ -1,4 +1,4 @@
-const trendingMock = (coins) => {
+const losersMock = (coins) => {
   coins.sort((a, b) => {
     if (a.changePercent24Hr < b.changePercent24Hr) {
       return -1;
@@ -11,4 +11,4 @@ const trendingMock = (coins) => {
   return coins;
 };
 
-export default trendingMock;
+export default losersMock;
