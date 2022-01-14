@@ -1,0 +1,23 @@
+.searchbar {
+  width: 100%;
+  height: 4rem;
+  margin: 0 0 4rem 0;
+  background-color: var(--bs-dark);
+
+  .main-search {
+    background-color: var(--bs-dark);
+    width: 100%;
+    height: 4rem;
+    font-size: 2rem;
+    border: 0;
+    padding: 0 1.5rem;
+  }
+
+  button {
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+    background-color: var(--bs-dark);
+    border: 0;
+  }
+}

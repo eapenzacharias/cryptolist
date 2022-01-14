@@ -1,0 +1,21 @@
+.table {
+  width: 100%;
+  overflow-x: auto;
+
+  tr {
+    height: 3.5rem;
+
+    .col {
+      font-size: 1.6rem;
+      height: 3.5rem;
+
+      .bd-danger {
+        background-color: #832e2e;
+      }
+
+      .bd-success {
+        background-color: #25703e;
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+$font-family-base: "Lato", sans-serif;
+$theme-colors: (
+  "primary": #000,
+  "secondary": #1a2122,
+  "light": #01a6cf,
+  "dark": #0197bd,
+);
+$dark2: #0289ad;
+$dark3: #015569;
+$white: #dbe8e9;
+
+* {
+  font-size: 12px;
+  padding: 0;
+
+  .body {
+    font-family: "Lato", sans-serif;
+    background-color: var(--bs-light);
+    color: var(--bs-primary);
+    padding: 0;
+
+    .main-container {
+      height: 100vh;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .container-fluid {
+      background-color: var(--bs-light);
+
+      .heading {
+        padding: 2.5rem 0;
+
+        h1 {
+          font: 700 3.5rem $font-family-base;
+          color: $dark3;
+        }
+
+        h2 {
+          font: 400 2.5rem $font-family-base;
+          color: $dark3;
+        }
+      }
+
+      .main {
+        background:
+          linear-gradient(0deg, #01a6cf93, #01a6cf93),
+          url("../assets/logo.png") no-repeat center;
+        background-size: 45%;
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 2.5rem;
+
+        h1 {
+          font: 700 5rem $font-family-base;
+          color: $white;
+          text-shadow: 0 0 10px #004a5c9c;
+        }
+
+        h2 {
+          text-transform: uppercase;
+          color: $white;
+          text-shadow: 0 0 10px #004a5cb9;
+        }
+      }
+
+      .sub-home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-height: 47vh;
+        min-height: 32vh;
+        padding-bottom: 0;
+
+        h2 {
+          width: 100%;
+          text-align: right;
+          padding: 4rem 1rem 0 0;
+          font-size: 1.6rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          color: $white;
+        }
+      }
+
+      @media (min-width: 576px) {
+        .sub-home {
+          height: 46vh;
+          padding-bottom: 0;
+        }
+      }
+
+      .one,
+      .four {
+        background-color: var(--bs-dark);
+      }
+
+      .two,
+      .three {
+        background-color: $dark2;
+      }
+    }
+  }
+}
+
+@import "~bootstrap/scss/bootstrap";
