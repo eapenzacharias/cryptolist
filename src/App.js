@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import { Container } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AllCoins from './components/AllCoins';
 import Home from './components/Home';
@@ -7,8 +9,14 @@ import Search from './components/Search';
 import TopGainers from './components/TopGainers';
 import TopLosers from './components/TopLosers';
 import Trending from './components/Trending';
+import { getData } from './redux/coins/coins';
 
 const App = () => {
+  const coinData = useSelector((state) => state.coinReducer);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (coinData.length === 0) dispatch(getData());
+  }, []);
   const NotMatch = () => (
     <>
       <div>
