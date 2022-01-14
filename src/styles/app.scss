@@ -74,7 +74,8 @@ $white: #dbe8e9;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 47vh;
+        max-height: 47vh;
+        min-height: 32vh;
         padding-bottom: 0;
 
         h2 {
@@ -86,9 +87,12 @@ $white: #dbe8e9;
           text-transform: uppercase;
           color: $white;
         }
+      }
 
-        .icon {
-          padding-top: 1rem;
+      @media (min-width: 576px) {
+        .sub-home {
+          height: 46vh;
+          padding-bottom: 0;
         }
       }
 
@@ -100,18 +104,6 @@ $white: #dbe8e9;
       .two,
       .three {
         background-color: $dark2;
-      }
-
-      @media (max-width: 575px) {
-        .one,
-        .three {
-          background-color: var(--bs-dark);
-        }
-
-        .two,
-        .four {
-          background-color: $dark2;
-        }
       }
     }
   }

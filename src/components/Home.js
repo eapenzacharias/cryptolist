@@ -13,7 +13,7 @@ const Home = () => {
         <Col lg={6}>
           <Row>
             <Col
-              sm={6}
+              xs={6}
               className="one sub-home"
               onClick={(e) => {
                 e.preventDefault();
@@ -31,7 +31,7 @@ const Home = () => {
               </h2>
             </Col>
             <Col
-              sm={6}
+              xs={6}
               className="two sub-home"
               onClick={(e) => {
                 e.preventDefault();
@@ -51,7 +51,7 @@ const Home = () => {
           </Row>
           <Row>
             <Col
-              sm={6}
+              xs={6}
               className="three sub-home"
               onClick={(e) => {
                 e.preventDefault();
@@ -69,7 +69,7 @@ const Home = () => {
               </h2>
             </Col>
             <Col
-              sm={6}
+              xs={6}
               className="four sub-home"
               onClick={(e) => {
                 e.preventDefault();
