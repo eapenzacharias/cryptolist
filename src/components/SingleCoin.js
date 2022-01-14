@@ -8,16 +8,17 @@ const imgURI = 'https://cryptoicon-api.vercel.app/api/icon/';
 
 const SingleCoin = (props) => {
   const {
-    symbol, name,
+    id, symbol, name,
     priceUsd, changePercent24Hr, supply,
-    volumeUsd24Hr, marketCapUsd, onHide,
+    volumeUsd24Hr, marketCapUsd, onHide, show,
   } = props;
 
   return (
     <>
       <Modal
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        {...props}
+        id={id}
+        onHide={onHide}
+        show={show}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
@@ -94,6 +95,7 @@ SingleCoin.propTypes = {
   priceUsd: PropTypes.number.isRequired,
   volumeUsd24Hr: PropTypes.number.isRequired,
   marketCapUsd: PropTypes.number.isRequired,
+  show: PropTypes.bool.isRequired,
   onHide: PropTypes.func.isRequired,
 };
 
