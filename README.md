@@ -3,10 +3,10 @@
 
 > Find all about popular cryptocurrencies and it's prices.
 
-<img width="7100%" alt="Screenshot 2022-01-15 at 00 40 15" src="https://user-images.githubusercontent.com/49812651/149572861-191487bd-4853-46c4-9cbb-e356d2ce3bd7.png">
-<span><img width="33%" alt="Screenshot 2022-01-15 at 00 49 29" src="https://user-images.githubusercontent.com/49812651/149572877-40af0791-49d9-44aa-846d-ace4d9c26d62.png"></span>
-<span><img width="33%" alt="Screenshot 2022-01-15 at 00 52 37" src="https://user-images.githubusercontent.com/49812651/149573394-3bb1c46d-cbad-47a5-bb9b-d902afb6c05d.png"></span>
-<span><img width="33%" alt="Screenshot 2022-01-15 at 00 52 48" src="https://user-images.githubusercontent.com/49812651/149573534-58ebe1ed-a3a4-40e4-bab0-265664696cb7.png"></span>
+<img width="100%" alt="Screenshot 2022-01-15 at 00 40 15" src="https://user-images.githubusercontent.com/49812651/149572861-191487bd-4853-46c4-9cbb-e356d2ce3bd7.png">
+<span><img width="32.5%" alt="Screenshot 2022-01-15 at 00 49 29" src="https://user-images.githubusercontent.com/49812651/149572877-40af0791-49d9-44aa-846d-ace4d9c26d62.png"></span>
+<span><img width="32.5%" alt="Screenshot 2022-01-15 at 00 52 37" src="https://user-images.githubusercontent.com/49812651/149573394-3bb1c46d-cbad-47a5-bb9b-d902afb6c05d.png"></span>
+<span><img width="32.5%" alt="Screenshot 2022-01-15 at 00 52 48" src="https://user-images.githubusercontent.com/49812651/149573534-58ebe1ed-a3a4-40e4-bab0-265664696cb7.png"></span>
 
 
 
